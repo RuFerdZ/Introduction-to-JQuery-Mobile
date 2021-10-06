@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>List views</title>
+
+        <meta charset="utf-8">
+        <!-- zoom level 1 view the page -->
+        <!-- will not alow user to pinch and zoom -->
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="description" content="this website is about jquery mobile">
+        <meta name="keywords" content="jquery,html,css,jquery mobile"> 
+
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    </head>
+    
+    <body>
+
+        <!-- always the first div will be the first page -->
+        <div data-role="page" id="home">
+            <div data-role="header">
+                <h1>Header</h1>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <!-- 
+                    2 types of lists
+                        - clickable links 
+                        - read only links - ordered & unordered
+                 -->
+                 <h3>Readonly, Unordered List</h3>
+                 <h4>Part 01</h4>
+                 <ul data-role="listview"> 
+                   <li>Html</li>
+                   <li>Css</li>
+                   <li>Javascript</li>
+                   <li>Bootstrap</li>
+                </ul>
+
+                 <h4>Part 02</h4>
+                 <ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Search me..."> 
+                     <!-- data-role provides the role for the list -->
+                     <!-- data-inset does not take full length/width of parent -->
+                     <!-- data-filter provides a search bar which can search the items on that list -->
+                    <li>Html</li>
+                    <li>Css</li>
+                    <li>Javascript</li>
+                    <li>Bootstrap</li>
+                 </ul>
+
+                 <h4>Part 03</h4>
+                 <!-- 
+                     If we want the data hidden in the list we use data-filter-reveal
+                     the moment u type anything inot the search, the required list items will get revealed
+                  -->
+                <ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Search me..." data-filter-reveal="true"> 
+                   <li>Html</li>
+                   <li>Css</li>
+                   <li>Javascript</li>
+                   <li>Bootstrap</li>
+                </ul>
+
+                 <h3>Readonly, Ordered List</h3>
+                 <ol data-role="listview" data-inset="true">
+                    <li>Html</li>
+                    <li>Css</li>
+                    <li>Javascript</li>
+                    <li>Bootstrap</li> 
+                 </ol>
+
+                 <h3>Clickable List</h3>
+                 <h4>Part 01</h4>
+                 <ul data-role="listview" data-inset="true">
+                     <li><a href="#">Html</a></li>
+                     <li><a href="#">Css</a></li>
+                     <li><a href="#">Javascript</a></li>
+                     <li><a href="#">Bootstrap</a></li>
+                 </ul>
+
+                 <!--  if we dont want the defacult '>' icon we can change it by using 'data-icon' attr -->
+                 <h4>Part 02</h4>
+                 <ul data-role="listview" data-inset="true">
+                    <li data-icon="home"><a href="#">Html</a></li>
+                    <li data-icon="phone"><a href="#">Css</a></li>
+                    <li data-icon="video"><a href="#">Javascript</a></li>
+                    <li data-icon="audio"><a href="#">Bootstrap</a></li>
+                </ul>
+
+            </div>
+
+            <div data-role="footer" data-position="fixed">
+                <h4>Page footer</h4>
+            </div>
+        </div>
+        
+
+    </body>
+</html>
