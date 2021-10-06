@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Buttons</title>
+
+        <meta charset="utf-8">
+        <!-- zoom level 1 view the page -->
+        <!-- will not alow user to pinch and zoom -->
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="description" content="this website is about jquery mobile">
+        <meta name="keywords" content="jquery,html,css,jquery mobile"> 
+
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    </head>
+    
+    <body>
+
+        <!-- always the first div will be the first page -->
+        <div data-role="page" id="home">
+            <div data-role="header">
+                <h1>Header</h1>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <h2>Jquery Mobile Buttons</h2>
+                <!-- <a href="#">Button 1</a> 
+                by default this will be a link until the class is given -->
+                <a href="#" class="ui-btn">Button 1</a> <!-- display in block -->
+                <a href="#" class="ui-btn ui-btn-inline">Button 2</a> <!-- display inline -->
+                <a href="#" class="ui-btn">Button 3</a>
+                <a href="#" class="ui-btn ui-btn-inline">Button 4</a>
+                <a href="#" class="ui-btn ui-btn-inline">Button 5</a>
+                <a href="#" class="ui-btn ui-btn-inline">Button 6</a>
+                <a href="#" class="ui-btn ui-btn-inline">Button 7</a>
+
+                <!-- adding corners to buttons -->
+                <a href="#" class="ui-btn ui-btn-inline ui-corner-all">Button 8</a>
+                <a href="#" class="ui-btn ui-corner-all">Button 9</a>
+
+                <!-- changing button size -->
+                <a href="#" class="ui-btn ui-corner-all ui-mini">Button 10</a>
+                <a href="#" class="ui-btn ui-btn-inline ui-corner-all ui-mini">Button 11</a>
+
+                <!-- 
+                    classes
+                    ---------------------------------------------
+                    ui-btn = tell its a button
+                    ui-btn-inline = place the button inline
+                    ui-corner-all = make all corners rounded
+                    ui-mini = display smaller size
+                    ---------------------------------------------
+                 -->
+            </div>
+
+            <div data-role="footer"data-position="fixed">
+                <h4>Page footer</h4>
+            </div>
+        </div>
+        
+
+    </body>
+</html>
