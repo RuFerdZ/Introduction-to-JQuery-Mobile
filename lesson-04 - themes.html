@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Themes</title>
+
+        <meta charset="utf-8">
+        <!-- zoom level 1 view the page -->
+        <!-- will not alow user to pinch and zoom -->
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="description" content="this website is about jquery mobile">
+        <meta name="keywords" content="jquery,html,css,jquery mobile"> 
+
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    </head>
+    
+    <body>
+
+        <!-- always the first div will be the first page -->
+        <div data-role="page" id="home" data-theme="b">
+            <div data-role="header">
+                <h1>Header</h1>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <h4>Themes on the webpage</h4>
+                <!-- 
+                    there are 2 types of the general themes in jquery
+                        - Theme a - light theme
+                        - Theme b - dark theme
+                    the default theme is 'a'. 
+
+                    we can change theme by using the data-theme attribute on an element, 
+                    or if needed for all, we can mention in the parent
+                 -->
+                 <p>we can customise our own themes in the <a href="http://themeroller.jquerymobile.com/">Jquery Mobile themeroller</a></p>
+            </div>
+
+            <div data-role="footer"data-position="fixed">
+                <h4>Page footer</h4>
+            </div>
+        </div>
+        
+
+    </body>
+</html>
