@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Themes and Buttons</title>
+
+        <meta charset="utf-8">
+        <!-- zoom level 1 view the page -->
+        <!-- will not alow user to pinch and zoom -->
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="description" content="this website is about jquery mobile">
+        <meta name="keywords" content="jquery,html,css,jquery mobile"> 
+
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    </head>
+    
+    <body>
+
+        <!-- always the first div will be the first page -->
+        <div data-role="page" id="home">
+            <div data-role="header">
+                <h1>Header</h1>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <h2>Jquery Mobile Buttons + Themes</h2>
+                <!-- <a href="#">Button 1</a> 
+                by default this will be a link until the class is given -->
+              
+                <a href="#" class="ui-btn ui-btn-inline ui-corner-all ui-mini">Button 1</a>
+                <a href="#" class="ui-btn ui-btn-inline">Button 2</a>
+
+                <!-- 
+                    classes
+                    ---------------------------------------------
+                    ui-btn = tell its a button
+                    ui-btn-inline = place the button inline
+                    ui-corner-all = make all corners rounded
+                    ui-mini = display smaller size
+                    ---------------------------------------------
+                 -->
+
+                 <h5>Buttons with Icons</h5>
+                
+                 <div>
+                    <a href="#" class="ui-btn ui-btn-inline ui-icon-shop ui-btn-icon-left">Shop</a>
+                    <!-- 
+                        this will not display the icon 'ui-icon-shop' unless we give a position 'ui-btn-icon-left' to it
+                     -->
+                     <a href="#" class="ui-btn ui-btn-inline ui-icon-video ui-btn-icon-right">Video</a>
+                 </div>
+
+                 <div>
+                    <a href="#" class="ui-btn ui-btn-inline ui-icon-audio ui-btn-icon-top">Audio</a>
+
+                    <a href="#" class="ui-btn ui-btn-inline ui-icon-phone ui-btn-icon-bottom">Call</a>  
+                 </div>
+
+                  
+
+                  <br>
+                  <a href="https://demos.jquerymobile.com/1.4.5/icons/">icons documentation</a>
+               
+
+                 <h5>Buttons with Themes</h5>
+
+                 <a href="#" class="ui-btn ui-btn-b" data-theme="b">Button 3</a> <!-- no need to specifically mention data-theme attr-->
+                 <a href="#" class="ui-btn">Button 4</a>
+            </div>
+
+            <div data-role="footer"data-position="fixed">
+                <h4>Page footer</h4>
+            </div>
+        </div>
+        
+
+    </body>
+</html>
