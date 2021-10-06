@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Setup JqueryMobile</title>
+        <title>Setup Jquery Mobile</title>
 
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
         <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -10,6 +10,53 @@
     </head>
     
     <body>
-        
+
+        <!-- data role is a role given to a element, could be any -->
+        <!-- we need to use ids to reference pages -->
+        <div data-role="page" id="home"> 
+            <div data-role="header">
+                <h1>Jquery Mobile</h1>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <h4>Homepage</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam varius metus massa, non consequat nisi pharetra vel. 
+                    Cras elementum purus ligula, vitae sollicitudin quam rhoncus id. Donec diam ex, fringilla at nisl eu, condimentum mollis lacus. 
+                    Aenean gravida a nulla eu ultricies. Vivamus eu eros nec lorem molestie aliquet. Nam quis tincidunt magna. Aenean accumsan, 
+                    nisi nec scelerisque vehicula, quam leo efficitur lacus, eget iaculis ligula erat ac tellus. Mauris ut posuere neque, vel imperdiet dolor.
+                </p>
+                <a href="#about">About page</a>
+            </div>
+
+            <div data-role="footer">
+                <h4>&copy; RuFerdZ Code Cypher 2021</h4>
+            </div>
+        </div>
+
+        <!-- About Page -->
+        <div data-role="page" id="about"> 
+            <div data-role="header">
+                <h1>About</h1>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <h3>About page</h3>
+                <p>
+                    Integer posuere, nibh laoreet congue pharetra, leo diam ultrices quam, a condimentum felis ipsum sit amet lacus. 
+                    Phasellus rutrum rutrum varius. Quisque vulputate quis ipsum eu molestie. Nulla in convallis ligula. Cras id aliquet orci. 
+                    Vivamus at eros maximus, interdum lectus at, iaculis enim. Nam pellentesque tortor a mauris feugiat, a laoreet ante viverra. 
+                    Praesent non est fermentum, lobortis lorem vel, finibus erat. Maecenas ultricies tortor vel sapien gravida venenatis. 
+                    Vivamus viverra elementum nulla vel tempor. Maecenas condimentum, leo tincidunt tempor rhoncus, metus diam molestie sapien, 
+                    et egestas neque magna a ex.
+                </p>
+                <a href="#home">Back</a>
+            </div>
+
+            <div data-role="footer">
+                <h4>&copy; RuFerdZ Code Cypher 2021</h4>
+            </div>
+        </div>
+
     </body>
 </html>
