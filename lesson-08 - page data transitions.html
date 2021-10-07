@@ -18,7 +18,18 @@
     
     <body>
 
+        <!-- Has default transitions -->
+        <!-- data-transition attribute is used to set the transition type when going to another page -->
+        <!-- 
+            pop
+            slide
+            flow
+            slidefade
+            flip
+         -->
+
         <!-- always the first div will be the first page -->
+        <!-- Home page -->
         <div data-role="page" id="home">
             <div data-role="header">
                 <h1>HOMEPAGE</h1>
@@ -26,9 +37,64 @@
 
             <div data-role="main" class="ui-content">
 
+                <ul data-role="listview">
+                    <li data-icon="video"><a href="#videos" data-transition="pop">Videos</a></li>
+                    <li data-icon="audio"><a href="#audio" data-transition="slide">Audio</a></li>
+                    <li data-icon="grid"><a href="#pic" data-transition="flow">Pictures</a></li>
+                </ul>
+
+                <p>More about transions - <a href="https://demos.jquerymobile.com/1.1.0/docs/pages/page-transitions.html">here</a></p>
             </div>
 
-            <div data-role="footer">
+            <div data-role="footer" data-position="fixed">
+                <h4>Page footer</h4>
+            </div>
+        </div>
+
+        <!-- Videos Page -->
+        <div data-role="page" id="videos">
+            <div data-role="header">
+                <h1>Videos Panel</h1>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <h1>Welcome to Video Center</h1>
+                <a href="#home" data-transition="pop">Go Back</a>
+            </div>
+
+            <div data-role="footer" data-position="fixed">
+                <h4>Page footer</h4>
+            </div>
+        </div>
+        
+        <!-- Audio Page -->
+        <div data-role="page" id="audio">
+            <div data-role="header">
+                <h1>Audio Panel</h1>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <h1>Welcome to Audio Center</h1>
+                <a href="#home" data-transition="slide">Go Back</a>
+            </div>
+
+            <div data-role="footer" data-position="fixed">
+                <h4>Page footer</h4>
+            </div>
+        </div>
+
+        <!-- Pictures Page -->
+        <div data-role="page" id="pic">
+            <div data-role="header">
+                <h1>Picture Panel</h1>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <h1>Welcome to Picture Center</h1>
+                <a href="#home">Go Back</a>
+            </div>
+
+            <div data-role="footer" data-position="fixed">
                 <h4>Page footer</h4>
             </div>
         </div>
