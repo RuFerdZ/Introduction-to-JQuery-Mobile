@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Responive Panels</title>
+
+        <meta charset="utf-8">
+        <!-- zoom level 1 view the page -->
+        <!-- will not alow user to pinch and zoom -->
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="description" content="this website is about jquery mobile">
+        <meta name="keywords" content="jquery,html,css,jquery mobile"> 
+
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    </head>
+    
+    <body>
+
+        <!-- always the first div will be the first page -->
+        <div data-role="page" id="home">
+            <div data-role="header">
+                <h1>Header</h1>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <a href="#menu" class="ui-btn ui-btn-inline">Slide</a>
+                <p>
+                <a href="https://demos.jquerymobile.com/1.4.5/panel/"> more info on panels</a></p>
+            </div>
+
+            <div data-role="footer" data-position="fixed">
+                <h4>Page footer</h4>
+            </div>
+
+            <!-- slide should be withing a page : most probably below footer -->
+            <!-- data-display to alter the way it is displayed -->
+            <!-- data-postion to change the panel location -->
+            <!-- data-inset gives a padding around the element -->
+            <div data-role="panel" id="menu" data-display="overlay" data-position="right">
+                <h1>RuFerdZ Code Cypher</h1>
+                <ul data-role="listview" data-inset="true">
+                    <li data-icon="gear"><a href="">Settings</a></li>
+                    <li data-icon="audio"><a href="">Sound System</a></li>
+                </ul>
+            </div>
+
+        </div>
+        
+
+    </body>
+</html>
