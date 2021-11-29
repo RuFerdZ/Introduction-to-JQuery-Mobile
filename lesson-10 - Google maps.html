@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Responive Panels</title>
+
+        <meta charset="utf-8">
+        <!-- zoom level 1 view the page -->
+        <!-- will not alow user to pinch and zoom -->
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="description" content="this website is about jquery mobile">
+        <meta name="keywords" content="jquery,html,css,jquery mobile"> 
+
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    </head>
+
+    <!-- create style to ui-content  -->
+    <style>
+        .ui-content {
+            background-color: rgb(197, 156, 156);
+            color: #222;
+        }
+    </style>
+    
+    <body>
+
+        <!-- always the first div will be the first page -->
+        <div data-role="page" id="home">
+            <div data-role="header">
+                <h1>Google Map Integration</h1>
+                <!-- add navigation bar with pages "Google Map" and "Video Integration" -->
+                <a href="#home" data-role="button" >Google Map</a>
+                <a href="#video" data-role="button">Video Integration</a>
+            </div>
+
+            <div data-role="main" class="ui-content">
+            </div>
+
+            <div data-role="footer" data-position="fixed">
+                <h4>Page footer</h4>
+            </div>
+
+        </div>
+
+        <!-- add new page with id video -->
+        <div data-role="page" id="video">
+            <div data-role="header">
+                <h1>Video Integration</h1>
+                <!-- add navigation bar with pages "Google Map" and "Video Integration" -->
+                <a href="#home" data-role="button" >Google Map</a>
+                <a href="#video" data-role="button">Video Integration</a>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <video width="320" height="240" controls>
+                    <source src="C:\Users\Rusiru\Downloads\Hero..දඟකාර Mashup Cover  Hector Dias.mp4" type="video/mp4">
+                    <source src="video/video.ogg" type="video/ogg">
+                    Your browser does not support the video tag.
+                </video>
+
+
+                <iframe width="200" height="200" src="C:\Users\Rusiru\Downloads\Hero..දඟකාර Mashup Cover  Hector Dias.mp4" frameborder="0" allowfullscreen></iframe>
+            </div>
+
+            <div data-role="footer" data-position="fixed">
+                <h4>Page footer</h4>
+            </div>
+        
+
+    </body>
+</html>
