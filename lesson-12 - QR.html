@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Responive Panels</title>
+
+        <meta charset="utf-8">
+        <!-- zoom level 1 view the page -->
+        <!-- will not alow user to pinch and zoom -->
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="description" content="this website is about jquery mobile">
+        <meta name="keywords" content="jquery,html,css,jquery mobile"> 
+
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    </head>
+
+    <script src="html5-qrcode.min.js"></script>
+    
+    <body>
+
+        <!-- always the first div will be the first page -->
+        <div data-role="page" id="home">
+            <div data-role="header">
+                <h1>QR Integration</h1>
+                <nav data-role="navbar">
+                    <ul>
+                        <li><a href="#" class="ui-btn ui-icon-home ui-btn-icon-top ui-btn-active ui-state-persist">Home</a></li>
+                        <li><a href="#" class="ui-btn ui-icon-calendar ui-btn-icon-top">Calendar</a></li>
+                        <li><a href="#" class="ui-btn ui-icon-clock ui-btn-icon-top">Time</a></li>
+                        <li><a href="#" class="ui-btn ui-icon-phone ui-btn-icon-top">Calls</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div data-role="main" class="ui-content">
+
+                <!-- <script>
+                    navigator.mediaDevices.getUserMedia(constraints)
+                        .then(function(stream) {
+                            var videoTracks = stream.getVideoTracks();
+                            console.log('Got stream with constraints:', constraints);
+                            console.log('Using video device: ' + videoTracks[0].label);
+                            stream.onremovetrack = function() {
+                                console.log('Stream ended');
+                            };
+                            window.stream = stream; // make variable available to browser console
+                            video.srcObject = stream;
+                        })
+                </script> -->
+
+                <div id="reader"></div>
+                
+                <script>
+                    function onScanSuccess(decodedText, decodedResult) {
+                        // Handle on success condition with the decoded text or result.
+                        console.log(`Scan result: ${decodedText}`, decodedResult);
+
+                        html5QrcodeScanner.clear();
+                        // ^ this will stop the scanner (video feed) and clear the scan area.
+
+                    }
+
+                    function onScanError(errorMessage) {
+                        // handle on error condition, with error message
+                    }
+
+
+                    var html5QrcodeScanner = new Html5QrcodeScanner("reader", { fps: 60, qrbox: 250 });
+                    html5QrcodeScanner.render(onScanSuccess);
+
+
+                    
+                </script>
+
+
+                <a href="https://webqr.com/index.html">WebQR</a>
+            </div>
+
+            <div data-role="footer" data-position="fixed">
+                <h4>Page footer</h4>
+            </div>
+        </div>
+
+    </body>
+</html>
