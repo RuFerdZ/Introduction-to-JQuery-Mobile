@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Responive Panels</title>
+
+        <meta charset="utf-8">
+        <!-- zoom level 1 view the page -->
+        <!-- will not alow user to pinch and zoom -->
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="description" content="this website is about jquery mobile">
+        <meta name="keywords" content="jquery,html,css,jquery mobile"> 
+
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    </head>
+
+    <script src="https://checkout.stripe.com/checkout.js"></script>
+    
+    <body>
+
+        <!-- always the first div will be the first page -->
+        <div data-role="page" id="home">
+            <div data-role="header">
+                <h1>Stripe Integration</h1>
+                <nav data-role="navbar">
+                    <ul>
+                        <li><a href="#" class="ui-btn ui-icon-home ui-btn-icon-top ui-btn-active ui-state-persist">Home</a></li>
+                        <li><a href="#" class="ui-btn ui-icon-calendar ui-btn-icon-top">Calendar</a></li>
+                        <li><a href="#" class="ui-btn ui-icon-clock ui-btn-icon-top">Time</a></li>
+                        <li><a href="#" class="ui-btn ui-icon-phone ui-btn-icon-top">Calls</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div data-role="main" class="ui-content">
+
+                <form id="frmBooking" name="bookingForm" action="_self"> 
+                    <input id="item_name" name="item_name" type="text" value="10 Kricket Tickets">
+                    <input id="total_value" name="total_value" type="text" value="500">
+                    <button id="customButton">Purchase</button>
+                </form>
+
+                <div aligne="center" id="thankyouPayment"></div>
+                
+                <!-- this is the script that connects the form to StripeCheckout -->
+                <!-- Code Section A Grab the booking form and initialise the stripe checkout form -->
+
+                <script>
+                    jQuery(function($) {
+                        // grap booking form by id
+                        var $form = $('#frmBooking');
+                        // initialise strip checkout form
+                        var handler = StripeCheckout.configure({
+                            key: 'pk_test_51K1H6wKASHrzU4oKhM2qp4Hg7fM5Tw85MfmuguPeqYE4jIbRfCIEdZnIOmgX3O1Ur8JH1aFMR9c4yAdHwsXX0ISp00vHYdArtU',
+                            token: function(token) {
+                                // use the token to create the charge with a server-side script.
+                                // you can access the token ID with 'token.id'
+
+                                // this will be printed when the transaction is successful. To charge, server side scripting is required.
+                                if (token.id){
+                                    $("#thankyouPayment").html("Thank you, your payment was successful!");
+
+                                    // you can also use the following code to re-submit the form content to another file for further processing.
+                                    // don't forget to add action to your form.
+                                    // $form.get(0).submit();
+
+                                    // or save the form data locally, using local storage.
+                                }
+                            }
+                        });
+
+                        $('#customButton').on('click', function(e){
+                            // Code section B open checkout with further options
+                            handler.open({
+                                name: 'Football Example',
+                                currency: 'gbp',
+                                description: $('#item_name').val(),
+                                amount: $('#total_value').val() * 100
+                            });
+                            e.preventDefault();
+                        });
+
+                        // Code section C close the checkout on page navigation
+                        $(window).on('popstate', function() {
+                            handler.close();
+                        });
+                    });
+                </script>
+                
+            </div>
+
+            <div data-role="footer" data-position="fixed">
+                <h4>Page footer</h4>
+            </div>
+        </div>
+
+    </body>
+</html>
